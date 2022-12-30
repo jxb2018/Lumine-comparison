@@ -1,0 +1,21 @@
+{
+  "Comment": "A simple AWS Step Functions",
+  "StartAt": "fn-a",
+  "States": {
+    "Open Case": {
+      "Type": "Task",
+      "Resource": "your arn of fn-a",
+      "Next": "fn-b"
+    },
+    "Assign Case": {
+      "Type": "Task",
+      "Resource": "your arn of fn-b",
+      "Next": "fn-c"
+    },
+    "Work on Case": {
+      "Type": "Task",
+      "Resource": "your arn of fn-c",
+      "End": true
+    }
+  }
+}
